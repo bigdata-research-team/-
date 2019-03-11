@@ -1,0 +1,72 @@
+1,hive的窗口函数在____版本之后可以使用,你们公司的hive版本是什么  2.1.0
+2,hive的自定义函数 udf udaf udtf
+3,将几个数据合并的函数  concat_ws这个需要你自己查一下
+	http://blog.sina.com.cn/s/blog_60c70be50102x0qc.html
+4,grouping sets的用法
+	https://www.cnblogs.com/ToDoToTry/p/5474231.html
+5,Hive 修改table、column
+	https://www.jianshu.com/p/9088fe002e2a
+6,Hive学习之修改表、分区、列
+	https://blog.csdn.net/skywalker_only/article/details/30224309
+7,拉链表,全量表,增量表,流水表的区别
+	https://blog.csdn.net/mtj66/article/details/78019370
+8,sparksql和hivesql语法上的区别
+	Spark-SQL 兼容90%以上的HiveSQL语法
+	以下是兼容的Hive函数列表
+	聚合函数:
+	approx(Count(Distinct)), avg, count, count(Distinct), first, last, max, mean, min, sum, sum(Distinct)
+	集合函数:
+	array_contains, explode, size, sort_array
+	日期时间转换
+	unix_timestamp, from_unixtime, to_date, quarter, day, dayofyear, weekofyear, from_utc_timestamp, to_utc_timestamp 
+	从日期时间中提取字段 
+	year, month, dayofmonth, hour, minute, second
+	日期/时间计算
+	datediff, date_add, date_sub, add_months, last_day, next_day, months_between 
+	获取当前时间等 
+	current_date, current_timestamp, trunc, date_format
+	数学函数：
+	abs, acros, asin, atan, atan2, bin, cbrt, ceil, conv, cos, sosh, exp, expm1, factorial, floor, hex, hypot, log, log10, log1p, log2, pmod, pow, rint, round, shiftLeft, shiftRight, shiftRightUnsigned, signum, sin, sinh, sqrt, tan, tanh, toDegrees, toRadians, unhex
+	混合函数:
+	array, bitwiseNOT, callUDF, coalesce, crc32, greatest, if, inputFileName, isNaN, isnotnull, isnull, least, lit, md5, monotonicallyIncreasingId, nanvl, negate, not, rand, randn, sha, sha1, sparkPartitionId, struct, when
+	字符串函数:
+	ascii, base64, concat, concat_ws, decode, encode, format_number, format_string, get_json_object, initcap, instr, length, levenshtein, locate, lower, lpad, ltrim, printf, regexp_extract, regexp_replace, repeat, reverse, rpad, rtrim, soundex, space, split, substring, substring_index, translate, trim, unb
+	窗口函数:
+	cumeDist, denseRank, lag, lead, ntile, percentRank, rank, rowNumber, base64, upper
+	不兼容的有：
+	不支持子查询 (类似：select * from a where a.id in (select id from b) ) 
+	不支持sysdate      用date_add(current_date, -1) 替代
+	不支持insert overwrite, 用 truncate table...；  insert into... ； 两条语句替代。\
+9.sql语句书写规则:子查询不能出现在select语句中,解决办法为lateral view
+10.kettle里面join操作:在数据库查询成功的sql语句放在kettle里被报无效字符
+	表输入不能做关联,表输入只能读取单表,然后用transfrom做表关联，然后表输出
+11.hue界面最多可以操作多大的的数据量(待解决)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
